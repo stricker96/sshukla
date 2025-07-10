@@ -17,11 +17,13 @@
   position: relative;
   max-width: 900px;
   margin: auto;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
 }
 
 .publications-list {
   display: inline-block;
-  animation: scroll-up 15s linear infinite;
+  animation: scroll-up 9s linear infinite;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -33,12 +35,16 @@
   color: var(--text-color);
   text-align: left;
   line-height: 1.6;
+  opacity: 0.95;
 }
 
-/* Smooth upward scroll */
+/* Fade top and bottom with mask */
 @keyframes scroll-up {
   0% {
     transform: translateY(100%);
+  }
+  90% {
+    transform: translateY(-100%);
   }
   100% {
     transform: translateY(-100%);

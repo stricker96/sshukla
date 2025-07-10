@@ -3,6 +3,8 @@
   max-width: 1100px;
   margin: auto;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .experience-section h2 {
@@ -11,106 +13,85 @@
   color: var(--accent-color);
 }
 
-.carousel-wrapper {
-  overflow: hidden;
+.experience-carousel-wrapper {
+  overflow: visible; /* allow full card height */
   position: relative;
+  width: 100%;
+  padding-bottom: 4em;
 }
 
 .experience-carousel {
   display: flex;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
+  gap: 2em;
 }
 
 .experience-slide {
   display: flex;
-  gap: 2em;
   flex: 0 0 100%;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 2em;
 }
 
 .experience-card {
-  flex: 0 0 45%;
-  perspective: 1000px;
-  min-width: 280px;
-  max-width: 400px;
-}
-
-.experience-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.experience-card:hover .experience-inner {
-  transform: rotateY(180deg);
-}
-
-.experience-front,
-.experience-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  background: var(--button-bg);
+  color: var(--text-color);
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  backface-visibility: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   padding: 1.5em;
-  box-sizing: border-box;
+  width: 45%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-.experience-front {
-  background-color: var(--button-bg);
-  color: var(--text-color);
+.experience-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1em;
 }
 
-.experience-back {
-  background-color: var(--accent-color);
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.experience-front h2 {
+.experience-card h2 {
   margin: 0;
   font-size: 1.2em;
   color: var(--accent-color);
 }
 
-.experience-front h3 {
-  margin: 0.2em 0 0.6em 0;
+.experience-card h3 {
+  margin: 0.2em 0 1em;
   font-size: 1em;
-  font-weight: normal;
+  color: var(--text-color);
 }
 
-.experience-front img {
-  max-width: 60px;
-  margin-bottom: 1em;
-}
-
-.experience-back p {
+.experience-card p {
   font-size: 0.95em;
   line-height: 1.6;
+  text-align: left;
 }
 
-/* Dots Navigation */
-.carousel-dots {
-  margin-top: 1em;
+/* Dots */
+.experience-dots {
+  text-align: center;
+  margin-top: 2em;
 }
 
-.carousel-dots .dot {
+.dot {
   height: 12px;
   width: 12px;
   margin: 0 6px;
-  background-color: var(--button-bg);
+  background-color: var(--text-color);
   border-radius: 50%;
   display: inline-block;
+  opacity: 0.4;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: opacity 0.3s;
 }
 
-.carousel-dots .dot.active {
+.dot.active {
+  opacity: 1;
   background-color: var(--accent-color);
 }

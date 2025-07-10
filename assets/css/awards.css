@@ -1,0 +1,46 @@
+.awards-section {
+  padding: 4em 2em;
+  background-color: var(--background-color, #f0f0f0);
+  text-align: left;
+}
+
+.awards-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.awards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.award-card {
+  background: var(--card-bg, #ffffff);
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.award-card h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: var(--accent-color, #222);
+}
+
+.award-card p {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.award-card ul {
+  padding-left: 1.2em;
+  margin: 0.5em 0 0;
+}
+
+.award-card ul li {
+  line-height: 1.6;
+}

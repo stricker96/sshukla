@@ -19,10 +19,12 @@
 }
 
 .award-card {
-  background: var(--card-bg, #ffffff);
+  background-color: var(--section-bg, #ffffff);
+  color: var(--text-color, #000);
   padding: 1.5em;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .award-card h3 {
@@ -44,3 +46,14 @@
 .award-card ul li {
   line-height: 1.6;
 }
+
+.award-card.highlight {
+  border: 2px solid var(--accent-color, #4caf50);
+  box-shadow: 0 0 12px 2px var(--accent-color, #4caf50);
+  background-color: var(--highlight-bg, #eaf8ea);
+}
+
+body.dark-mode .award-card.highlight {
+  background-color: var(--highlight-bg-dark, #263d29);
+}
+

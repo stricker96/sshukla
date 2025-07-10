@@ -4,6 +4,10 @@
   --accent-color: #3a6073;
   --button-bg: white;
   --button-text: #16222a;
+
+  /* New variables for theme consistency */
+  --section-bg: #ffffff;
+  --highlight-bg: #eaf8ea;
 }
 
 [data-theme="dark"] {
@@ -12,6 +16,19 @@
   --accent-color: #5c93b0;
   --button-bg: #333;
   --button-text: white;
+
+  /* New variables for dark theme */
+  --section-bg: #1c1c1c;
+  --highlight-bg: #263d29;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar {
@@ -66,36 +83,25 @@
   font-size: 1em;
 }
 
-/* Use variables */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .cta-button {
   background: var(--button-bg);
   color: var(--button-text);
 }
 
 header, footer {
-    background-color: #222;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
 }
 
 section {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
 }
 
 .theme-toggle:hover {
   background: var(--accent-color);
   color: white;
 }
-

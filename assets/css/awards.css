@@ -8,7 +8,9 @@
   text-align: center;
   font-size: 2em;
   margin-bottom: 2em;
+  color: var(--accent-color);
 }
+
 
 .awards-container {
   display: flex;

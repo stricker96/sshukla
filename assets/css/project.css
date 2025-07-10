@@ -124,18 +124,18 @@
   z-index: 1;
 }
 .project1 .flip-front {
-  background-image: url('assets/img/project1.png');
+  background-image: url('../img/project1.png');
 }
 
 .project2 .flip-front {
-  background-image: url('assets/img/project2.png');
+  background-image: url('../img/project2.png');
 }
 
 .project3 .flip-front {
-  background-image: url('assets/img/project3.png');
+  background-image: url('../img/project3.png');
 }
 
 .project4 .flip-front {
-  background-image: url('assets/img/project4.png');
+  background-image: url('../img/project4.png');
 }
 

@@ -1,4 +1,8 @@
 .hero {
+  margin-top: 60px; /* adjust to navbar height */
+}
+
+.hero {
   background: linear-gradient(to right, #3a6073, #16222a);
   color: white;
   text-align: center;

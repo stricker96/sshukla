@@ -1,25 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".experience-slide");
-  const carousel = document.querySelector(".experience-carousel");
-  const dots = document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".dot");
+const slides = document.querySelectorAll(".experience-slide");
+const carousel = document.querySelector(".experience-carousel");
+let currentSlide = 0;
+let isTransitioning = false;
 
-  let currentSlide = 0;
-  const totalSlides = slides.length;
+function showSlide(index) {
+  if (!carousel || isTransitioning) return;
+  isTransitioning = true;
 
-  function showSlide(index) {
-    const offset = index * -100;
-    carousel.style.transform = `translateX(${offset}%)`;
+  const offset = index * -100;
+  carousel.style.transform = `translateX(${offset}%)`;
 
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index]?.classList.add("active");
 
-  dots.forEach((dot, idx) => {
-    dot.addEventListener("click", () => {
-      currentSlide = idx;
-      showSlide(currentSlide);
-    });
-  });
+  setTimeout(() => {
+    isTransitioning = false;
+  }, 600);
+}
 
-  showSlide(currentSlide);
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => showSlide(i));
 });
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 8000);

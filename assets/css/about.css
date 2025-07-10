@@ -27,7 +27,10 @@
 
 .about-text {
   flex: 2 1 500px;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-text h2 {

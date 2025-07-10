@@ -5,19 +5,17 @@
   --button-bg: white;
   --button-text: #16222a;
 
-  /* New variables for theme consistency */
   --section-bg: #ffffff;
   --highlight-bg: #eaf8ea;
 }
 
-[data-theme="dark"] {
+.dark-mode {
   --bg-color: #121212;
   --text-color: #f4f4f4;
   --accent-color: #5c93b0;
   --button-bg: #333;
   --button-text: white;
 
-  /* New variables for dark theme */
   --section-bg: #1c1c1c;
   --highlight-bg: #263d29;
 }

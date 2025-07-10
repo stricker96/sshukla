@@ -93,7 +93,10 @@
 }
 
 .flip-front {
-  background: var(--bg) center/cover no-repeat;
+  background-image: var(--bg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: white;
   font-weight: bold;
   font-size: 1.1em;
@@ -101,10 +104,36 @@
 }
 
 .flip-back {
-  background: var(--button-bg);
+  background-image: var(--bg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--button-bg); /* fallback if image doesn't load */
   color: var(--text-color);
   transform: rotateY(180deg);
   text-align: left;
   font-size: 0.95em;
   line-height: 1.5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  box-sizing: border-box;
 }
+
+.flip-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.flip-back p {
+  position: relative;
+  z-index: 1;
+}
+
+

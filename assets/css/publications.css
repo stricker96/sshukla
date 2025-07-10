@@ -61,20 +61,3 @@
   animation-play-state: paused;
 }
 
-/* Scroll buttons */
-.scroll-btn {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  margin: 0.5em 0;
-  border-radius: 8px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.scroll-btn:hover {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-}

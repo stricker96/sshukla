@@ -4,13 +4,12 @@
   text-align: left;
 }
 
-.awards-section h2 {
+.awards-section > h2 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 2em;
-  color: var(--accent-color);
+  color: var(--accent-color) !important;
 }
-
 
 .awards-container {
   display: flex;

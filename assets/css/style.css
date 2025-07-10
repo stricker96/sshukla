@@ -1,3 +1,31 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #222;
+  --accent-color: #3a6073;
+  --button-bg: white;
+  --button-text: #16222a;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --accent-color: #5c93b0;
+  --button-bg: #333;
+  --button-text: white;
+}
+
+/* Use variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,3 +46,22 @@ section {
     max-width: 800px;
     margin: auto;
 }
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.4em 0.7em;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-color);
+  color: white;
+}
+

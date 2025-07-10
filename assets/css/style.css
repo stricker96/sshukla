@@ -16,6 +16,9 @@
 
 /* Use variables */
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -24,14 +27,6 @@ body {
 .cta-button {
   background: var(--button-bg);
   color: var(--button-text);
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
 header, footer {
